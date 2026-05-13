@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager - Tier 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Tasks</h1>
+        
+        <form id="taskForm">
+            <input type="text" id="taskInput" placeholder="Enter a task" required>
+            <select id="categorySelect">
+                
+            </select>
+            <input type="number" id="taskTimer" placeholder="Mins" min="1" style="width: 60px;">
+            <button type="submit" id="addBtn">Add Task</button>
+        </form>
+
+        <div class="stats-container">
+            <p>Total: <span id="totalCount">0</span></p>
+            <p>Completed: <span id="completedCount">0</span></p>
+            <p>Pending: <span id="pendingCount">0</span></p>
+        </div>
+
+        <div class="filter-container">
+            <input type="text" id="searchInput" placeholder="Search tasks...">
+            <label for="filterSelect">Filter by Category:</label>
+            <select id="filterSelect">
+                <option value="All">All</option>
+                
+            </select>
+        </div>
+
+        <div id="notification-container"></div>
+        <div id="loader" class="hidden"></div>
+
+        <ul id="taskList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

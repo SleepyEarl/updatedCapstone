@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 420px;
+}
+
+#taskForm {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 8px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #e9ecef;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.stats-container p { margin: 0; }
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.task-text {
+    flex: 1;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.completed .task-text {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.6;
+}
+
+.actions {
+    display: flex;
+    gap: 5px;
+}
+
+button {
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.editBtn { background-color: #ffc107; }
+.deleteBtn { background-color: #dc3545; color: white; }
+.saveBtn { background-color: #28a745; color: white; }
+
+.category-badge {
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+}
+
+.category-badge.badge-api {
+    background-color: #6f42c1;
+}
+
+.badge-personal { background-color: #007bff; }
+.badge-work { background-color: #6c757d; }
+.badge-urgent { background-color: #dc3545; }
+
+.task-content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.filter-container {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #fdfdfd;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#searchInput {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.notification {
+    background: #333;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+#loader {
+    width: 30px;
+    height: 30px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 10px auto;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.timer-display {
+    font-size: 0.75rem;
+    color: #666;
+    background: #eee;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-left: 10px;
+    font-family: monospace;
+}
+
+#taskTimer {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.startPauseBtn {
+    background-color: #007bff;
+    color: white;
+}
+
+.resetBtn {
+    background-color: #6c757d;
+    color: white;
+}
+
+.timer-display {
+    font-weight: bold;
+    font-family: monospace;
+    margin-left: 10px;
+    background: #eee;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
