@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager - Mini Capstone</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="faah.png">
+</head>
+<body>
+
+    <button id="themeToggle" class="theme-btn">Click To Toggle Dark Mode</button>
+    
+    <div class="container">
+        <h1>My Tasks</h1>
+        
+        <form id="taskForm">
+            <input type="text" id="taskInput" placeholder="Enter a task" required>
+            <select id="categorySelect"></select>
+            <select id="prioritySelect">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <input type="number" id="taskTimer" placeholder="Mins" min="1" style="width: 60px;">
+            <button type="submit" id="addBtn">Add Task</button>
+        </form>
+
+        <div class="stats-container">
+            <p>Total: <span id="totalCount">0</span></p>
+            <p>Completed: <span id="completedCount">0</span></p>
+            <p>Pending: <span id="pendingCount">0</span></p>
+        </div>
+
+        <div class="filter-container">
+            <input type="text" id="searchInput" placeholder="Search tasks...">
+            <div>
+                <label for="filterSelect">Filter by Category:</label>
+                <select id="filterSelect">
+                    <option value="All">All</option>
+                </select>
+                <button id="exportBtn" class="export-btn">Export JSON</button>
+            </div>
+        </div>
+
+        <div id="notification-container"></div>
+        <div id="loader" class="hidden"></div>
+
+        <ul id="taskList"></ul>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
